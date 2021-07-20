@@ -54,7 +54,7 @@
 					<p>Cambiar el nombre de la aplicación</p>
 				</td>
 				<td>
-					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen08.jpg?raw=true" width="75%" weight="auto"></p>
+					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen08.jpg?raw=true" width="50%" weight="auto"></p>
 				</td>
 			</tr>
 			<tr>
@@ -64,7 +64,7 @@
 					<p>Cambiar el identificador de la aplicación</p>
 				</td>
 				<td>
-					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen09.jpg?raw=true" width="75%" weight="auto"></p>
+					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen09.jpg?raw=true" width="65%" weight="auto"></p>
 				</td>
 			</tr>
 			<tr>
@@ -73,7 +73,7 @@
 					<p>Cambiar el identificador de la aplicación</p>
 				</td>
 				<td>
-					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen10.jpg?raw=true" width="75%" weight="auto"></p>
+					<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Crear_APK/imagen10.jpg?raw=true" width="95%" weight="auto"></p>
 				</td>
 			</tr>
 		</table>
