@@ -4,15 +4,13 @@
     <p>Nombrar la nueva clase MainGame y heredar de la clase Game. Dar doble clic en el recuadro que aparece abajo para importar su paquete.</p>
     <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen02.jpg?raw=true"></p>
     <p>Presionar alt+intro y dar clic en implement methods, dar clic en OK en el siguiente menu.</p>
-    <p float="left">
-        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen03.jpg?raw=true"></p>
-        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen04.jpg?raw=true"></p>
+    <p float="left" align="middle">
+        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen03.jpg?raw=true" width="50%" weigth="auto">
+        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen04.jpg?raw=true" width="40%" weigth="auto">
     </p>
     <p>Ir al DesktopLauncher y cambiar prueba por MainGame, dar doble clic en el recuadro de abajo.</p>
-    <p float="left">
-        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen05.jpg?raw=true"></p>
-        <img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen06.jpg?raw=true"></p>
-    </p>
+    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen05.jpg?raw=true"></p>
+    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen06.jpg?raw=true"></p>
 <h2>Crear pantalla base</h2>
     <p>Crear nueva clase en donde se encuentra MainGame, implementar la clase Screen, dar doble clic en el recuadro para importar su paquete. Después presionar alt+intro para implementar sus métodos</p>
     <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen07.jpg?raw=true"></p>
@@ -25,12 +23,11 @@
     <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen10.jpg?raw=true"></p>
     <p>En la función de render, limpiar la pantalla usando la siguiente función, mientras se escribe, presionar alt+intro para importar su paquete.</p>
     
-    ```javascript
-    Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-    ```
-
-    <p>Después ir a MainGame para crear la nueva pantalla.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen11.jpg?raw=true"></p>
+```javascript
+Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+```
+   <p>Después ir a MainGame para crear la nueva pantalla.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen11.jpg?raw=true"></p>
 <h2>Crear el mundo de físicas</h2>
     <p>Crear variables de World, Box2DDebugRenderer y OrthographicCamera. Importar sus paquetes.</p>
     <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba00_creacion_del_mundo/imagen12.jpg?raw=true"></p>
