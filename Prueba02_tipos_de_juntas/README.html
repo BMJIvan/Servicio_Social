@@ -7,7 +7,7 @@
 private float W,H,R,An,La;
 ```
 
-    <p>En la función show se crea la pantalla</p>
+   <p>En la función show se crea la pantalla</p>
 
 ```javascript
 An=48;
@@ -21,7 +21,7 @@ renderer=new Box2DDebugRenderer();
 camera=new OrthographicCamera(La,An);
 ```
 
-    <p>Se crearán funciones para poder crear Body y Fixture de una manera más eficiente. Para crear el Body se usarán como parámetros la posición y el tipo de cuerpo, para la Fixture se usarán la forma y propiedades. El tipo de cuerpo por será estático.</p>
+   <p>Se crearán funciones para poder crear Body y Fixture de una manera más eficiente. Para crear el Body se usarán como parámetros la posición y el tipo de cuerpo, para la Fixture se usarán la forma y propiedades. El tipo de cuerpo por será estático.</p>
 <h2>Crear Fixture</h2>
 
 ```javascript
@@ -59,7 +59,7 @@ private BodyDef createBody(float Px, float Py, Character Tipo) {
 }
 ```
 
-    <p>Se usarán dos formas</p>
+   <p>Se usarán dos formas</p>
 
 ```javascript
 CircleShape Crshape=new CircleShape();
@@ -76,7 +76,7 @@ private Body BodyCr1,BodyCr2;
 private Fixture Cr1Fix,Cr2Fix;
 ```
 
-    <p>Se definen en la función show</p>
+   <p>Se definen en la función show</p>
 
 ```javascript
 BodyCr1=world.createBody(createBody(-20,15,'D'));
@@ -96,13 +96,13 @@ Cushape.set(vertices);
 Tr1Fix=BodyTr1.createFixture(createFix(Cushape,.1f,.1f,.1f));
 ```
 
-    <p>Se declaran dos juntas de revolución.</p>
+   <p>Se declaran dos juntas de revolución.</p>
 
 ```javascript
 private RevoluteJoint JoinRev1,JoinRev2;
 ```
 
-    <p>Se hace una función para crear la junta de revolución.</p>
+   <p>Se hace una función para crear la junta de revolución.</p>
 
 ```javascript
 private JointDef createRevjoin(Body BA, Body BB, float Ax, float Ay, float Bx, float By, boolean cl, boolean M, float Mt, float s) {
@@ -119,15 +119,15 @@ private JointDef createRevjoin(Body BA, Body BB, float Ax, float Ay, float Bx, f
 }
 ```
 
-    <p>Se crean las dos juntas de revolución en la función show.</p>
+   <p>Se crean las dos juntas de revolución en la función show.</p>
 
 ```javascript
 JoinRev1=(RevoluteJoint) world.createJoint(createRevjoin(BodyTr1,BodyCr1,0,0,-5,0,true,false,0,0));
 JoinRev2=(RevoluteJoint) world.createJoint(createRevjoin(BodyCr1,BodyCr2,0,0,-5,0,true,false,0,0));
 ```
 
-    <p>*los Body son creados en el mismo lugar para que la asignación de LocalAnchor sea más facil.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen01.jpg?raw=true" width="20%"></p>
+   <p>*los Body son creados en el mismo lugar para que la asignación de LocalAnchor sea más facil.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen01.jpg?raw=true" width="20%"></p>
 
 <h2>Junta prismática</h2>
     <p>Se declaran los cuerpos.</p>
@@ -137,7 +137,7 @@ private Body BodyCu1,BodyCu2;
 private Fixture Cu1Fix,Cu2Fix;
 ```
 
-    <p>Se definen en la función show.</p>
+   <p>Se definen en la función show.</p>
 
 ```javascript
 BodyCu1=world.createBody(createBody(-20,0,'S'));
@@ -149,13 +149,13 @@ Cushape.setAsBox(.5f,.5f);
 Cu2Fix=BodyCu2.createFixture(createFix(Cushape,1,0,1));
 ```
 
-    <p>Se declara la junta prismática</p>
+   <p>Se declara la junta prismática</p>
 
 ```javascript
 private PrismaticJoint JoinPr;
 ```
 
-    <p>Se hace una función para crear la junta prismática.</p>
+   <p>Se hace una función para crear la junta prismática.</p>
 
 ```javascript
 private JointDef createPrJoin(Body BA, Body BB, float Ax, float Ay, float Bx, float By, boolean cl, boolean lm, boolean M,float s, float L, float U, int lx, int ly) {
@@ -175,7 +175,7 @@ private JointDef createPrJoin(Body BA, Body BB, float Ax, float Ay, float Bx, fl
 }
 ```
 
-    <p>Se crea la junta prismática en la funcion show.</p>
+   <p>Se crea la junta prismática en la funcion show.</p>
 
 ```javascript
 JoinPr=(PrismaticJoint) world.createJoint(createPrJoin(BodyCu1,BodyCu2,.5f,0,-.5f,0,true,true,false,0,0,10,1,-1));
@@ -193,7 +193,7 @@ private Body BodyCu3;
 private Fixture Cu3Fix,Cu4Fix;
 ```
 
-    <p>Se definen los cuerpos en funcion show.</p>
+   <p>Se definen los cuerpos en funcion show.</p>
 
 ```javascript
 BodyCu3=world.createBody(createBody(-20,-15,'D'));
@@ -209,13 +209,13 @@ Crshape.setRadius(1);
 Cr4Fix=BodyCr4.createFixture(createFix(Crshape,1,1,0));
 ```
 
-    <p>Se declara la junta soldadura.</p>
+   <p>Se declara la junta soldadura.</p>
 
 ```javascript
 private WeldJoint JoinWel1,JoinWel2;
 ```
 
-    <p>Se hace una función para crear la junta de soldadura.</p>
+   <p>Se hace una función para crear la junta de soldadura.</p>
 
 ```javascript
 private JointDef createWelJoin(Body BA, Body BB, float Ax, float Ay, float Bx, float By, boolean coll, float Dm, int Fr) {
@@ -231,22 +231,22 @@ private JointDef createWelJoin(Body BA, Body BB, float Ax, float Ay, float Bx, f
 }
 ```
 
-    <p>Se crean las juntas de soldadura en la función show.</p>
+   <p>Se crean las juntas de soldadura en la función show.</p>
 
 ```javascript
 JoinWel1=(WeldJoint) world.createJoint(createWelJoin(BodyCu3,BodyCr3,-1.5f,-2,.3f,1.3f,true,0,0));
 JoinWel2=(WeldJoint) world.createJoint(createWelJoin(BodyCu3,BodyCr4,1.5f,-2,-.3f,1.3f,true,0,0));
 ```
 
-    <p>Haciendo esto aparece un carrito, pero se cae al vacio, así que se agregará un suelo.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen03.jpg?raw=true" width="20%"></p>
-    <p>Se declara el cuerpo.</p>
+   <p>Haciendo esto aparece un carrito, pero se cae al vacio, así que se agregará un suelo.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen03.jpg?raw=true" width="20%"></p>
+   <p>Se declara el cuerpo.</p>
 
 ```javascript
 private Body BodyCu4;
 ```
 
-    <p>Se define en la función show.</p>
+   <p>Se define en la función show.</p>
 
 ```javascript
 BodyCu4=world.createBody(createBody(0,-20,'S'));
@@ -254,7 +254,7 @@ Cushape.setAsBox(25,.5f);
 Cu4Fix=BodyCu4.createFixture(createFix(Cushape,1,.1f,.1f));
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen04.jpg?raw=true" width="20%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen04.jpg?raw=true" width="80%"></p>
 <h2>Junta de distancia</h2>
     <p>Se declaran los cuerpos.</p>
 
@@ -265,7 +265,7 @@ private Body BodyTr2;
 private Fixture Tr2Fix;
 ```
 
-    <p>Se definen los cuerpos en la función show.</p>
+   <p>Se definen los cuerpos en la función show.</p>
 
 ```javascript
 BodyTr2=world.createBody(createBody(0,15,'S'));
@@ -281,13 +281,13 @@ Crshape.setRadius(1);
 Cr6Fix=BodyCr6.createFixture(createFix(Crshape,1,1,0));
 ```
 
-    <p>Se declara la junta.</p>
+   <p>Se declara la junta.</p>
 
 ```javascript
 private DistanceJoint JoinDis1,JoinDis2;
 ```
 
-    <p>Se hace una función para crear la junta de distancia.</p>
+   <p>Se hace una función para crear la junta de distancia.</p>
 
 ```javascript
 private JointDef createDisjoin(Body BA,Body BB,float Ax,float Ay,float Bx,float By,boolean cl,float Le,float Dm,float Fr) {
@@ -304,16 +304,16 @@ private JointDef createDisjoin(Body BA,Body BB,float Ax,float Ay,float Bx,float 
 }
 ```
 
-    <p>Se hacen las juntas de distancia.</p>
+   <p>Se hacen las juntas de distancia.</p>
 
 ```javascript
 JoinDis1=(DistanceJoint) world.createJoint(createDisjoin(BodyTr2,BodyCr5,0,0,0,0,true,10,0,0));
 JoinDis1=(DistanceJoint) world.createJoint(createDisjoin(BodyCr5,BodyCr6,0,0,0,0,true,10,0,0));
 ```
 
-    <p>En esta ocasión se asignó las posiciones correctas desde la creación del cuerpo, así que en los LocalAnchor se dejaron en 0 para ambas juntas. Si se cambia la longitud de distancia al iniciar la simulación las posiciones comenzarán a corregirse.</p>
-    <p>*no asignar una distancia de 0, ocasionará problemas al simular.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen05.jpg?raw=true" width="20%"></p>
+   <p>En esta ocasión se asignó las posiciones correctas desde la creación del cuerpo, así que en los LocalAnchor se dejaron en 0 para ambas juntas. Si se cambia la longitud de distancia al iniciar la simulación las posiciones comenzarán a corregirse.</p>
+   <p>*no asignar una distancia de 0, ocasionará problemas al simular.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen05.jpg?raw=true" width="50%"></p>
 <h2>Junta de polea</h2>
     <p>Se declaran los cuerpos.</p>
 
@@ -322,7 +322,7 @@ private Body BodyCu5,BodyCu6;
 private Fixture Cu5Fix,Cu6Fix;
 ```
 
-    <p>Se definen los cuerpos en función show.</p>
+   <p>Se definen los cuerpos en función show.</p>
 
 ```javascript
 BodyCu5=world.createBody(createBody(10,-5,'D'));
@@ -334,13 +334,13 @@ Cushape.setAsBox(.5f,.5f);
 Cu6Fix=BodyCu6.createFixture(createFix(Cushape,1,0,.1f));
 ```
 
-    <p>Se declara la junta.</p>
+   <p>Se declara la junta.</p>
 
 ```javascript
 private PulleyJoint JoinPul;
 ```
 
-    <p>Se hace una función para crear la junta.</p>
+   <p>Se hace una función para crear la junta.</p>
 
 ```javascript
 private JointDef createPuljoin(Body BA,Body BB,float Ax,float Ay,float Bx,float By,float Gax,float Gay,float Gbx,float Gby,boolean cl,float La,float Lb,float r) {
@@ -359,15 +359,15 @@ private JointDef createPuljoin(Body BA,Body BB,float Ax,float Ay,float Bx,float 
 }
 ```
 
-    <p>Se hace la junta de polea.</p>
+   <p>Se hace la junta de polea.</p>
 
 ```javascript
 JoinPul=(PulleyJoint) world.createJoint(createPuljoin(BodyCu5,BodyCu6,0,.5f,0,.5f,10,5,15,5,true,5,5,1));
 ```
 
-    <p>En esta junta también se le asigno la posición inicial desde el principio para que al comenzar la simulación no se movieran.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen06.jpg?raw=true" width="20%"></p>
-    <p>*las posiciones de groundAnchor son desde el centro del mundo.</p>
+   <p>En esta junta también se le asigno la posición inicial desde el principio para que al comenzar la simulación no se movieran.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen06.jpg?raw=true" width="20%"></p>
+   <p>*las posiciones de groundAnchor son desde el centro del mundo.</p>
 <h2>Junta de mouse</h2>
     <p>Se declaran los cuerpos.</p>
 
@@ -376,7 +376,7 @@ private Body BodyCc,BodyGr;
 private Fixture CcFix;
 ```
 
-    <p>Se definen en la función show.</p>
+   <p>Se definen en la función show.</p>
 
 ```javascript
 BodyCc=world.createBody(createBody(0,0,'D'));
@@ -386,20 +386,20 @@ CcFix=BodyCc.createFixture(createFix(Cushape,1,1,0));
 BodyGr=world.createBody(createBody(0,0,'S'));
 ```
 
-    <p>Ya que se crearon los últimos cuerpos se eliminan las formas.</p>
+   <p>Ya que se crearon los últimos cuerpos se eliminan las formas.</p>
 
 ```javascript
 Cushape.dispose();
 Crshape.dispose();
 ```
 
-    <p>Se declara la junta.</p>
+   <p>Se declara la junta.</p>
 
 ```javascript
 private MouseJoint JoinMou;
 ```
 
-    <p>Se hace una función para crear la junta de mouse</p>
+   <p>Se hace una función para crear la junta de mouse</p>
 
 ```javascript
 private JointDef createMoujoin(Body BA,Body BB,boolean cl,float m,float Dm,float Fr) {
@@ -414,16 +414,16 @@ private JointDef createMoujoin(Body BA,Body BB,boolean cl,float m,float Dm,float
 }
 ```
 
-    <p>Se hace la junta de mouse</p>
+   <p>Se hace la junta de mouse</p>
 
 ```javascript
 JoinMou=(MouseJoint) world.createJoint(createMoujoin(BodyGr,BodyCc,true,1000,0,100));
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen07.jpg?raw=true" width="20%"></p>
-    <p>El cubo no se mueve ya que el target por defecto es el (0, 0).</p>
-    <p>*no asignar un valor de frecuencia pequeño ya que e cubo recibirá menor fuerza, si se asigna un cero dará error al crear la junta.</p>
-    <p>Se hacen funciones para el cambio de coordenadas de pixel a metros. El (0, 0) en metros es el centro de la pantalla.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen07.jpg?raw=true" width="20%"></p>
+   <p>El cubo no se mueve ya que el target por defecto es el (0, 0).</p>
+   <p>*no asignar un valor de frecuencia pequeño ya que e cubo recibirá menor fuerza, si se asigna un cero dará error al crear la junta.</p>
+   <p>Se hacen funciones para el cambio de coordenadas de pixel a metros. El (0, 0) en metros es el centro de la pantalla.</p>
 
 ```javascript
 private float Pix2Boy(float Py) {
@@ -435,19 +435,19 @@ private float Pix2Box(float  Px) {
 }
 ```
 
-    <p>Se asigna el target con la posición del mouse en la pantalla.</p>
+   <p>Se asigna el target con la posición del mouse en la pantalla.</p>
 
 ```javascript
 JoinMou.setTarget(new Vector2(Pix2Box(Gdx.input.getX()),Pix2Boy(Gdx.input.getY())));
 ```
 
-    <p>Ahora el cubo se podrá mover, pero en el caso en detecte valores fuera de rango de la pantalla el cubo se seguirá moviendo. Así que se hará una comprobación de la posición del mouse antes de asignar el target. Se agregarán variables para guardar la posición del mouse.</p>
+   <p>Ahora el cubo se podrá mover, pero en el caso en detecte valores fuera de rango de la pantalla el cubo se seguirá moviendo. Así que se hará una comprobación de la posición del mouse antes de asignar el target. Se agregarán variables para guardar la posición del mouse.</p>
 
 ```javascript
 private  float corx,cory;
 ```
 
-    <p>Se realiza la comprobación, si está en el rango se le asigna el valor de la junta.</p>
+   <p>Se realiza la comprobación, si está en el rango se le asigna el valor de la junta.</p>
 
 ```javascript
 corx=Gdx.input.getX();
@@ -461,8 +461,8 @@ if(corx<=0||corx>=W||cory<=0||cory>=H)
 }
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="20%"></p>
-    <p>Para eliminar de forma segura los cuerpos y juntas se usará el siguiente código en la función dispose, justo después se elimina el renderer y al último el mundo.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="20%"></p>
+   <p>Para eliminar de forma segura los cuerpos y juntas se usará el siguiente código en la función dispose, justo después se elimina el renderer y al último el mundo.</p>
 <h2>Eliminar todas las juntas y cuerpos</h2>
     <p>Eliminar Fixture una por una</p>
 
@@ -481,7 +481,7 @@ BodyCr5.destroyFixture(Cr5Fix);
 BodyCr6.destroyFixture(Cr6Fix);
 ```
 
-    <p>Eliminar las juntas</p>
+   <p>Eliminar las juntas</p>
 
 ```javascript
 Array<Joint> joints=new Array<Joint>();
@@ -492,7 +492,7 @@ Array<Joint> joints=new Array<Joint>();
     }    
 ```
 
-    <p>Eliminar los cuerpos</p>
+   <p>Eliminar los cuerpos</p>
 
 ```javascript
 Array<Body> bodies = new Array<Body>();
@@ -506,8 +506,8 @@ Array<Body> bodies = new Array<Body>();
     world.dispose();    
 ```
 
-    <p>*es posible no eliminar las juntas, ya que se eliminan cuando al menos uno de los cuerpos de los que dependen es destruido.</p>
-    <p>Como extra se agregará una comprobación de la posición de los cuerpos del carrito, para que cuando se caiga, aparezca justo arriba de la pantalla.</p>
+   <p>*es posible no eliminar las juntas, ya que se eliminan cuando al menos uno de los cuerpos de los que dependen es destruido.</p>
+   <p>Como extra se agregará una comprobación de la posición de los cuerpos del carrito, para que cuando se caiga, aparezca justo arriba de la pantalla.</p>
 
 ```javascript
 if(BodyCr3.getPosition().y<((-An/2)-1.5f)&&BodyCr4.getPosition().y<((-An/2)-1.5f)&&BodyCu3.getPosition().y<((-An/2)-1.5f))
@@ -518,7 +518,7 @@ if(BodyCr3.getPosition().y<((-An/2)-1.5f)&&BodyCr4.getPosition().y<((-An/2)-1.5f
 }
 ```
 
-    <p>Al usar la transformación el carrito aparecerá con la misma velocidad con la que estaba cayendo así que se modificarán los valores de velocidad a cero justo después de aplicarse la transformación.</p>
+   <p>Al usar la transformación el carrito aparecerá con la misma velocidad con la que estaba cayendo así que se modificarán los valores de velocidad a cero justo después de aplicarse la transformación.</p>
 
 ```javascript
 BodyCr3.setLinearVelocity(0,0);
@@ -533,7 +533,7 @@ private float Fx,Fy;
 private String str;
 ```
 
-    <p>Se usarán funciones para el cambio de coordenadas de metros a pixeles.</p>
+   <p>Se usarán funciones para el cambio de coordenadas de metros a pixeles.</p>
 
 ```javascript
 private float Boy2Piy(float Cy) {
@@ -545,34 +545,34 @@ private float Box2Pix(float Cx) {
 }
 ```
 
-    <p>Ahora se definen variables de batch (para dibujar en pantalla) y font (para traer los caracteres).</p>
+   <p>Ahora se definen variables de batch (para dibujar en pantalla) y font (para traer los caracteres).</p>
 
 ```javascript
 private BitmapFont font;
 private SpriteBatch batch;
 ```
 
-    <p>Se inicializan en la función show.</p>
+   <p>Se inicializan en la función show.</p>
 
 ```javascript
 font=new BitmapFont();
 batch=new SpriteBatch();
 ```
 
-    <p>Se crea un nuevo formato para mostrar hasta un decimal en la funcion render.</p>
+   <p>Se crea un nuevo formato para mostrar hasta un decimal en la funcion render.</p>
 
 ```javascript
 DecimalFormat df = new DecimalFormat("#0.00");
 ```
 
-    <p>Se guardan los componentes de fuerza.</p>
+   <p>Se guardan los componentes de fuerza.</p>
 
 ```javascript
 Fx=JoinMou.getReactionForce(1/delta).x;
 Fy=JoinMou.getReactionForce(1/delta).y;
 ```
 
-    <p>Cada texro se imprimirá al lado derecho del cubo con una altura de un metro y medio de diferencia.</p>
+   <p>Cada texro se imprimirá al lado derecho del cubo con una altura de un metro y medio de diferencia.</p>
 
 ```javascript
 batch.begin();
@@ -585,21 +585,21 @@ font.draw(batch,"Y: "+str,Box2Pix(BodyCc.getPosition().x + 1.5f),Boy2Piy(BodyCc.
 batch.end();
 ```
 
-    <p>Los números cambian a 60 veces por segundo así que no se puede notar cual número se está mostrando, por eso se agregarán nuevas variables para guardar el texto que se va a mostrar, sin embargo el texto va a actualizase cada 12 imágenes.</p>
-    <p>Se cambia la variable de texto por tres y se agrega un contador.</p>
+   <p>Los números cambian a 60 veces por segundo así que no se puede notar cual número se está mostrando, por eso se agregarán nuevas variables para guardar el texto que se va a mostrar, sin embargo el texto va a actualizase cada 12 imágenes.</p>
+   <p>Se cambia la variable de texto por tres y se agrega un contador.</p>
 
 ```javascript
 private String str1,str2,str3;
 private int cont;
 ```
 
-    <p>Se inicializa el contador en la función show.</p>
+   <p>Se inicializa el contador en la función show.</p>
 
 ```javascript
 cont=12;
 ```
 
-    <p>Se modifica el código de obtención de los componentes de fuerza.</p>
+   <p>Se modifica el código de obtención de los componentes de fuerza.</p>
 
 ```javascript
 if(cont==0) {
@@ -612,7 +612,7 @@ if(cont==0) {
 }cont=cont-1;
 ```
 
-    <p>Se debe seguir dibujando el texto a un lado del cubo.</p>
+   <p>Se debe seguir dibujando el texto a un lado del cubo.</p>
 
 ```javascript
 batch.begin();
@@ -622,14 +622,14 @@ font.draw(batch,"Y: "+str3,Box2Pix(BodyCc.getPosition().x + 1.5f),Boy2Piy(BodyCc
 batch.end();
 ```
 
-    <p>Al pasar la aplicación al celular el texto podría verse más grande o más pequeño, así que se debe agregar un factor de escala en la función show.</p>
+   <p>Al pasar la aplicación al celular el texto podría verse más grande o más pequeño, así que se debe agregar un factor de escala en la función show.</p>
 
 ```javascript
 font.getData().setScale(H/480);
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="20%"></p>
-    <p>No olvidar eliminar el font y batch en la función dispose, no importa donde se agregen las lineas</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="60%"></p>
+   <p>No olvidar eliminar el font y batch en la función dispose, no importa donde se agregen las lineas</p>
 
 ```javascript
 font.dispose();
