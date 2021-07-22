@@ -313,7 +313,7 @@ JoinDis1=(DistanceJoint) world.createJoint(createDisjoin(BodyCr5,BodyCr6,0,0,0,0
 
    <p>En esta ocasión se asignó las posiciones correctas desde la creación del cuerpo, así que en los LocalAnchor se dejaron en 0 para ambas juntas. Si se cambia la longitud de distancia al iniciar la simulación las posiciones comenzarán a corregirse.</p>
    <p>*no asignar una distancia de 0, ocasionará problemas al simular.</p>
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen05.jpg?raw=true" width="80%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen05.jpg?raw=true" width="50%"></p>
 <h2>Junta de polea</h2>
     <p>Se declaran los cuerpos.</p>
 
@@ -628,7 +628,7 @@ batch.end();
 font.getData().setScale(H/480);
 ```
 
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="40%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba02_tipos_de_juntas/imagen08.jpg?raw=true" width="60%"></p>
    <p>No olvidar eliminar el font y batch en la función dispose, no importa donde se agregen las lineas</p>
 
 ```javascript
