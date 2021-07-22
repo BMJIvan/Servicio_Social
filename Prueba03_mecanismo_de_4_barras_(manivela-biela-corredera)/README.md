@@ -59,7 +59,7 @@ Crshape.dispose();
 ```
 
    <p>Cuando se crean los objetos, estos colisionan entre sí, por eso salen volando.</p>
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen01.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen01.jpg?raw=true" width="40%"></p>
    <p>Para evitar las colisiones se crea un grupo de filtro con un -1, lo cual significa que ningún cuerpo en ese grupo podrá colisionar entre sí.</p>
    <p>*si el valor es igual o mayor a cero podrán colisionar.</p>
 
@@ -78,7 +78,7 @@ Cu2Fix.setFilterData(fil);
 ```
 
    <p>En este punto ya no colisionan, solo caen al vacío.</p>
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen02.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen02.jpg?raw=true" width="40%"></p>
    <p>Se crean las juntas en la función show.</p>
 
 ```javascript
@@ -88,7 +88,7 @@ JoinRev2=(RevoluteJoint) world.createJoint(createRevjoin(BodyCr,BodyCu1,-.18f,0,
 JoinRev3=(RevoluteJoint) world.createJoint(createRevjoin(BodyCu1,BodyCu2,.38f,0,-.07f,0,false,false,0,0));
 ```
 
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen03.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen03.jpg?raw=true" width="50%"></p>
    <p>Al no tener fricción tardará mucho tiempo en detenerse, así que se les asignará fricción angular a los tres cuerpos dinámicos.</p>
 
 ```javascript
@@ -97,7 +97,7 @@ BodyCu1.setAngularDamping(.5f);
 BodyCr.setAngularDamping(.5f);
 ```
 
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen04.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba03_mecanismo_de_4_barras_(manivela-biela-corredera)/imagen04.jpg?raw=true" width="50%"></p>
    <p>Se agregan variables para el setpoint, error, error anterior, suma de errores, par de torsión, Kp (ganancia proporcional), Kd (ganancia derivativa), Ki (ganancia integrativa),</p>
 
 ```javascript
