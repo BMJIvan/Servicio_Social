@@ -6,13 +6,13 @@
 	<p>*Desde Android Studio: sdk</p>
 <h2>configuración Android Studio</h2>
 	<p>Pantalla de inicio->configure->SDK Manager->SDK platforms</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen001.jpg?raw=true" width="30%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen001.jpg?raw=true" width="30%"></p>
 	<p>Instalar SDK de versión Android que se va utilizar para desarrollar y elegir carpeta donde se guardará el SDK. La ruta que se elija no debe contener acentos, ya que generará problemas al compilar la aplicación.</p>
 	<p>*Se recomienda instalar una versión más alta y una versión más baja</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen002.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen002.jpg?raw=true" width="75%"></p>
 	<p>Pantalla de inicio->configure->SDK Manager->SDK tools</p>
 	<p>Se usó la siguiente configuración:</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen003.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen003.jpg?raw=true" width="75%"></p>
 <h2>libGDX</h2>
 	<p>libGDX: <u>https://libgdx.badlogicgames.com/download.html</u></p>
 	<p>*buscar en google gdx setup</p>
@@ -42,37 +42,37 @@
 <h2>Abrir proyecto creado por libGDX</h2>
 	<p>Menú principal->import project->elegir carpeta donde es guardado el proyecto generado por libGDX</p>
 	<p>*Actualizar todo</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen005.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen005.jpg?raw=true" width="75%"></p>
 	<p>Cuando se tenga la siguiente pantalla estará listo para poder programar.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen006.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen006.jpg?raw=true" width="75%"></p>
 <h2>Ver en escritorio</h2>
 	<p>Carpeta Desktop: dar clic derecho en DesktopLauncher y dar clic en Run 'DesktopLauncher.main()'</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen007.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen007.jpg?raw=true" width="75%"></p>
 	<p>Aparecerá un error, pero se habrá creado la configuración de DesktopLauncher.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen008.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen008.jpg?raw=true" width="75%"></p>
 	<p>DesktopLauncher->Edit Configuration</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen009.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen009.jpg?raw=true" width="75%"></p>
 	<p>En el Working directory, escribir la ruta donde se encuentra la carpeta assets del proyecto. En general solo hay que agregar: \android\assets a lo que tenga por default.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen010.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen010.jpg?raw=true" width="75%"></p>
 	<p>Al dar cilc en correr Aparecerá la siguiente pantalla, indicando que ya funciona.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen011.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen011.jpg?raw=true" width="75%"></p>
 <h2>Ver en Android</h2>
 	<p>De acuerdo a la versión de Android, buscar la forma de activar la opción de programador. Dentro de las opciones de programador, en la seccion de depuración, activar la depuración por USB. También ponerlo en cargar dispositivo.</p>
 	<p float="left" align="center">
-		<img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen012.jpg?raw=true" width="25%" weigth="auto">
-		<img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen013.jpg?raw=true" width="25%" weigth="auto">
+		<img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen012.jpg?raw=true" width="25%">
+		<img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen013.jpg?raw=true" width="25%">
 	</p>
 	<p>Elegir la opción de Android y dar clic en correr</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen014.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen014.jpg?raw=true" width="75%"></p>
 	<p>Elegir el dispositivo y dar clic en OK</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen015.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen015.jpg?raw=true" width="75%"></p>
 	<p>En la pantalla se mostrará en automático la siguiente pantalla</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen016.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen016.jpg?raw=true" width="75%"></p>
 <h1>Corrección de problemas</h1>
 	<p>Eliminar "warning compile is obsolete"</p>
 	<p>En la carpeta Gradle Scripts, el primer archivo build.gradle (Project prueba) cambiar todas las instrucciones "compile" con "implementation"</p>
 	<p>Al borrar la clase por defecto y crear una nueva como principal, hay que modificar el AndroidLauncher y el DesktopLauncher.</p>
 	<p>En Android->java->com.mygdx.prueba->AndroidLauncher modificar el parámetro de "initialize" con el nombre de la nueva clase.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen017.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen017.jpg?raw=true" width="75%"></p>
 	<p>En desktop->java->com.mygdx.prueba.desktop->DesktopLauncher modificar el parámetro de "LwjgIApplicationConfiguration" por el nombre de la nueva clase.</p>
-	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen018.jpg?raw=true" width="75%" weight="auto"></p>
+	<p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Instalacion_configuracion_correcion_de_problemas/imagen018.jpg?raw=true" width="75%"></p>
