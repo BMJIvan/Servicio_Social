@@ -61,7 +61,7 @@ cadena.createChain(chain);
 SuFix=BodySu.createFixture(createFix(cadena,0,1,0));
 ```
 
-   <p>Se crea un cubo, se usa la fórmula para aplicar el valor de fricción.</p>
+   <p>Se crea un cubo, se usa la fórmula del cuerpo B para aplicar el valor de fricción, es decir, se eleva al cuadrado 0.6.</p>
 
 ```javascript
 PolygonShape Cushape=new PolygonShape();
