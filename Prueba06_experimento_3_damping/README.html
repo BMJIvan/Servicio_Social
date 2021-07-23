@@ -8,19 +8,19 @@
 private float Vi=10,t=0,V=10,damping=.9f;
 ```
 
-    <p>Se cambia el nombre de las variables pos1, pos2, por vel1, vel2.</p>
+   <p>Se cambia el nombre de las variables pos1, pos2, por vel1, vel2.</p>
 
 ```javascript
 private String str,vel1,vel2,error;
 ```
 
-    <p>Se modifica el ancho de la pantalla a 8m.</p>
+   <p>Se modifica el ancho de la pantalla a 8m.</p>
 
 ```javascript
 An=8;
 ```
 
-    <p>Se modifica el cubo, su fricción y restitución van a ser 0, se cambia la posición inicial, se aplica la velocidad inicial y el valor de damping.</p>
+   <p>Se modifica el cubo, su fricción y restitución van a ser 0, se cambia la posición inicial, se aplica la velocidad inicial y el valor de damping.</p>
 
 ```javascript
 PolygonShape Cushape=new PolygonShape();
@@ -32,7 +32,7 @@ BodyCu.setLinearVelocity(Vi,0);
 BodyCu.setLinearDamping(damping);
 ```
 
-    <p>En la función render, se limpia la pantalla y se crea el formato de texto.</p>
+   <p>En la función render, se limpia la pantalla y se crea el formato de texto.</p>
 
 ```javascript
 Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -40,13 +40,13 @@ Gdx.gl.glClearColor(0.1f,0f,0.1f,0.5f);
 DecimalFormat df = new DecimalFormat("#0.00");
 ```
 
-    <p>Se usa la ecuación de la velocidad afectada por el damping.</p>
+   <p>Se usa la ecuación de la velocidad afectada por el damping.</p>
 
 ```javascript
 V=V*(1-delta*damping);
 ```
 
-    <p>Se guardan los valores de velocidad, así como el error.</p>
+   <p>Se guardan los valores de velocidad, así como el error.</p>
 
 ```javascript
 vel1=df.format(BodyCu.getLinearVelocity().x);
@@ -54,7 +54,7 @@ vel2=df.format(V);
 error=df.format(Math.abs(BodyCu.getLinearVelocity().x-V));
 ```
 
-    <p>Se cambia lo que se va a mostrar en pantalla, y se corrige e nombre de las variables.</p>
+   <p>Se cambia lo que se va a mostrar en pantalla, y se corrige e nombre de las variables.</p>
 
 ```javascript
 batch.begin();
@@ -64,4 +64,4 @@ font.draw(batch,"           error ="+error,Box2Pix(-2),Boy2Piy(1.2f));
 batch.end();
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba06_experimento_3_damping/imagen01.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba06_experimento_3_damping/imagen01.jpg?raw=true" width="60%"></p>
