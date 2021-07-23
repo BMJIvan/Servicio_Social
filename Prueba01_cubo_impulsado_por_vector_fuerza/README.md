@@ -99,7 +99,7 @@ private BodyDef createBodycubodef() {
 }
 ```
 
-   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba01_cubo_impulsado_por_vector_fuerza/imagen02.jpg?raw=true" width="75%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba01_cubo_impulsado_por_vector_fuerza/imagen03.jpg?raw=true" width="75%"></p>
    <p>Siempre en la función dispose eliminar todos los Body y Fixture.</p>
 
 ```javascript
