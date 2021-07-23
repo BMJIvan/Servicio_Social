@@ -4,7 +4,7 @@
     <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba05_experimento_2_friccion_(dinamico)/imagen01.jpg?raw=true" width="60%"></p>
     <p>Debido a que es una masa, solo se necesita una ecuación.</p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}m\ddot{X}+F_{r}=F"></p>
-    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}donde F_{r}=W\mu"></p>
+    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}F_{r}=W\mu"></p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}m\ddot{X}=F-F_{r}=F-W\mu"></p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\ddot{X}=\frac{F-W\mu}{m}"></p>
     <p>Se debe integrar dos veces.</p>
@@ -34,7 +34,7 @@ private List<Float> graftra;
 private List<Float> grafecu;
 ```
 
-    <p>Inicializar variables de mundo en función show</p>
+   <p>Inicializar variables de mundo en función show</p>
 
 ```javascript
 An=5;
@@ -47,7 +47,7 @@ renderer=new Box2DDebugRenderer();
 camera=new OrthographicCamera(La,An);
 ```
 
-    <p>Se crea un suelo y el cubo de la misma forma que en el anterior experimento, pero se incrementa la longitud del suelo.</p>
+   <p>Se crea un suelo y el cubo de la misma forma que en el anterior experimento, pero se incrementa la longitud del suelo.</p>
 
 ```javascript
 Vector2[] chain=new Vector2[2];
@@ -67,8 +67,8 @@ CuFix=BodyCu.createFixture(createFix(Cushape,1,(float)Math.pow(.6f,2),0));
 Cushape.dispose();
 ```
 
-    <p>*se están usando las funciones createbody y createfix antes hechas.</p>
-    <p>Se inicializan las variables de gráficos y listas.</p>
+   <p>*se están usando las funciones createbody y createfix antes hechas.</p>
+   <p>Se inicializan las variables de gráficos y listas.</p>
 ```javascript
 font=new BitmapFont();
 batch=new SpriteBatch();
@@ -82,8 +82,8 @@ graftra.clear();
 grafecu.clear();
 ```
 
-    <p>*se están usando las funciones FragShader y VertShader antes hechas.</p>
-    <p>En la función render se limpia la pantalla y se crea el formato de texto.</p>
+   <p>*se están usando las funciones FragShader y VertShader antes hechas.</p>
+   <p>En la función render se limpia la pantalla y se crea el formato de texto.</p>
 
 ```javascript
 Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -91,7 +91,7 @@ Gdx.gl.glClearColor(0.1f,0f,0.1f,0.5f);
 DecimalFormat df = new DecimalFormat("#0.00");
 ```
 
-    <p>Se aplica una fuerza en el centro del cubo de 7N y se guardan las posiciones del objeto.</p>
+   <p>Se aplica una fuerza en el centro del cubo de 7N y se guardan las posiciones del objeto.</p>
 
 ```javascript
 BodyCu.applyForceToCenter(F,0,true);
@@ -99,7 +99,7 @@ graftra.add(BodyCu.getPosition().x);
 graftra.add(BodyCu.getPosition().y);
 ```
 
-    <p>Se escribe la ecuación que se obtuvo antes, se guardan los datos considerando que la altura se mantiene constante.</p>
+   <p>Se escribe la ecuación que se obtuvo antes, se guardan los datos considerando que la altura se mantiene constante.</p>
 
 ```javascript
 X=((t*t)/2)-2.5f;
@@ -107,15 +107,15 @@ grafecu.add(X);
 grafecu.add(.1f);
 ```
 
-    <p>Se usa una función para graficar. La gráfica que se obtiene del cuerpo se queda en su lugar, y la que se obtiene por medio de la ecuación se traslada un poco arriba.</p>
+   <p>Se usa una función para graficar. La gráfica que se obtiene del cuerpo se queda en su lugar, y la que se obtiene por medio de la ecuación se traslada un poco arriba.</p>
 
 ```javascript
 plot(graftra,0,0,1,1,1,0,0,.5f,true);
 plot(grafecu,0,0,1,1,0,1,0,.5f,true);
 ```
 
-    <p>*se usa la función plot antes hecha en la prueba de gráficos</p>
-    <p>Se guarda los valores de posición en dos variables y se obtiene el error.</p>
+   <p>*se usa la función plot antes hecha en la prueba de gráficos</p>
+   <p>Se guarda los valores de posición en dos variables y se obtiene el error.</p>
 
 ```javascript
 pos1=df.format(BodyCu.getPosition().x);
@@ -123,7 +123,7 @@ pos2=df.format(X);
 error=df.format(Math.abs(BodyCu.getPosition().x-X));
 ```
 
-    <p>Se muestran las variables de posición y el error.</p>
+   <p>Se muestran las variables de posición y el error.</p>
 
 ```javascript
 batch.begin();
@@ -133,10 +133,10 @@ font.draw(batch,"           error ="+error,Box2Pix(-2),Boy2Piy(1.2f));
 batch.end();
 ```
 
-    <p>Al final de la función render agregar la ecuación del tiempo.</p>
+   <p>Al final de la función render agregar la ecuación del tiempo.</p>
 
 ```javascript
 t=t+delta;
 ```
 
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba05_experimento_2_friccion_(dinamico)/imagen02.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba05_experimento_2_friccion_(dinamico)/imagen02.jpg?raw=true" width="60%"></p>
