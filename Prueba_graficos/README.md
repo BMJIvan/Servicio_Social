@@ -299,6 +299,7 @@ BodyCr.setLinearVelocity((float)(BodyCr.getLinearVelocity().x*vel),
 ```
 
    <p>Por último se dibujará los datos antes guardados.</p>
+   
 ```javascript
 batch.begin();
 font.draw(batch,"FPS = "+fps,Box2Pix(-6),Boy2Piy(4.5f));
