@@ -69,6 +69,7 @@ Cushape.dispose();
 
    <p>*se están usando las funciones createbody y createfix antes hechas.</p>
    <p>Se inicializan las variables de gráficos y listas.</p>
+   
 ```javascript
 font=new BitmapFont();
 batch=new SpriteBatch();
