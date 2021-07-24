@@ -4,11 +4,11 @@
     <p>El eje x se considerará como el eje paralelo, por lo tanto, la aceleración en x es cero. Se considerará que se parte del reposo. A partir de esto se obtiene la siguiente ecuación.</p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\ddot{x}=0"></p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\dot{x}=vx"></p>
-    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\ddot{x}=vxt+x_{0}"></p>
+    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}x=vxt+x_{0}"></p>
     <p>El eje y se considera como el eje perpendicular al eje x, por lo tanto su aceleración será igual a -g. A partir de esto se obtienen la siguiente ecuación.</p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\ddot{y}=-g"></p>
     <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\dot{y}=-gt+vy"></p>
-    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}\ddot{y}=-g\frac{t^2}{2}+vyt+y_{0}"></p>
+    <p align="center"><img src="https://latex.codecogs.com/svg.latex?\Large&space;\color{White}y=-g\frac{t^2}{2}+vyt+y_{0}"></p>
 <h2>En código</h2>
     <p>Se crea el mundo, se crea la variable de gravedad con un valor de 10, se van a usar dos cuerpos, uno es el suelo y el otro es el cuerpo al que se le aplicara un impulso de velocidad.</p>
 
