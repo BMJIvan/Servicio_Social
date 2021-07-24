@@ -19,21 +19,21 @@ private Body BodyCu,BodySu;
 private Fixture CuFix,SuFix;
 ```
 
-    <p>Se crean las variables para guardar y mostrar la velocidad. También se guarda la posición inicial del cuerpo.</p>
+   <p>Se crean las variables para guardar y mostrar la velocidad. También se guarda la posición inicial del cuerpo.</p>
 
 ```javascript
 private String Vx,Vy,VR,Vxs,Vys,VRs;
 private  float t,velx,vely,velr,velxs,velys,velrs,pxo,pyo,tf;
 ```
 
-    <p>Se crean dos listas para graficar.</p>
+   <p>Se crean dos listas para graficar.</p>
 
 ```javascript
 private List<Float> grafica;
 private List<Float> graficaf;    
 ```
 
-    <p>Rn función show, inicializar el mundo.</p>
+   <p>Rn función show, inicializar el mundo.</p>
 
 ```javascript
 An=10;
@@ -46,7 +46,7 @@ renderer=new Box2DDebugRenderer();
 camera=new OrthographicCamera(La,An);
 ```
 
-    <p>Se crea el suelo usando una cadena.</p>
+   <p>Se crea el suelo usando una cadena.</p>
 
 ```javascript
 Vector2[] chain=new Vector2[5];
@@ -63,7 +63,7 @@ cadena.createChain(chain);
 SuFix=BodySu.createFixture(createFix(cadena,0,0,0));
 ```
 
-    <p>Se le da una posición inicial en la esquina superior izquierda, se evita que gire al usar setFixedRotation como true.</p>
+   <p>Se le da una posición inicial en la esquina superior izquierda, se evita que gire al usar setFixedRotation como true.</p>
 
 ```javascript
 pxo=(-La/2)+1;
@@ -76,7 +76,7 @@ Cushape.dispose();
 BodyCu.setFixedRotation(true);
 ```
 
-    <p>Se inicializa las variables de gráficos y se limpian las listas.</p>
+   <p>Se inicializa las variables de gráficos y se limpian las listas.</p>
 
 ```javascript
 font=new BitmapFont();
@@ -92,11 +92,11 @@ grafica.clear();
 graficaf.clear();
 ```
 
-    <p>*se deben usar las funciones FragShader y VertShader.</p>
-    <p>Así queda el escenario.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen01.jpg?raw=true" width="60%"></p>
-    <p>En la función render</p>
-    <p>Se limpia la pantalla y se crea un formato de texto.</p>
+   <p>*se deben usar las funciones FragShader y VertShader.</p>
+   <p>Así queda el escenario.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen01.jpg?raw=true" width="60%"></p>
+   <p>En la función render</p>
+   <p>Se limpia la pantalla y se crea un formato de texto.</p>
 
 ```javascript
 Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -104,7 +104,7 @@ Gdx.gl.glClearColor(0.1f, 0f, 0.1f, 0.5f);
 DecimalFormat df = new DecimalFormat("#0.00");
 ```
 
-    <p>Se le da un valor de velocidad inicial.</p>
+   <p>Se le da un valor de velocidad inicial.</p>
 
 ```javascript
 if(t==0) {
@@ -113,7 +113,7 @@ if(t==0) {
 }
 ```
 
-    <p>Se guarda los valores de velocidad del cuerpo, y se usan las ecuaciones obtenidas al principio.</p>
+   <p>Se guarda los valores de velocidad del cuerpo, y se usan las ecuaciones obtenidas al principio.</p>
 
 ```javascript
 velx=BodyCu.getLinearVelocity().x;
@@ -124,7 +124,7 @@ velys=(-g*t)+(5);
 velrs=(float)Math.sqrt(Math.pow(velxs,2)+Math.pow(velys,2));
 ```
 
-    <p>Se convierten los valores de velocidad a string.</p>
+   <p>Se convierten los valores de velocidad a string.</p>
 
 ```javascript
 Vx=df.format(velx);
@@ -135,7 +135,7 @@ Vys=df.format(velys);
 VRs=df.format(velrs);
 ```
 
-    <p>Se guarda los valores de posición en las listas, se usan las ecuaciones del principio.</p>
+   <p>Se guarda los valores de posición en las listas, se usan las ecuaciones del principio.</p>
 
 ```javascript
 grafica.add(BodyCu.getPosition().x);
@@ -144,14 +144,14 @@ graficaf.add(5*t+pxo);
 graficaf.add(((-g * t * t) / 2) + (5 * t) + pyo);
 ```
 
-    <p>Se grafican usando la función plot que se creó antes.</p>
+   <p>Se grafican usando la función plot que se creó antes.</p>
 
 ```javascript
 plot(grafica,0,0,1,1,1,0,0,1,true);
 plot(graficaf,0,0,1,1,0,1,0,1,true);
 ```
 
-    <p>Se muestran en pantalla las velocidades.</p>
+   <p>Se muestran en pantalla las velocidades.</p>
 
 ```javascript
 batch.begin();
@@ -164,16 +164,16 @@ font.draw(batch,"velocidad Rs= "+VRs,Box2Pix((-La/2)+.5f),Boy2Piy(-.5f));
 batch.end();
 ```
 
-    <p>Se agrega la ecuación del tiempo el final de la función render.</p>
+   <p>Se agrega la ecuación del tiempo el final de la función render.</p>
 
 ```javascript
 t=t+delta;
 ```
 
-    <p>Así se ve la aplicación después de que el cubo se detiene.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen02.jpg?raw=true" width="60%"></p>
-    <p>*la aplicación sigue calculando después de que el cubo se detiene, así que se van a hacer algunas modificaciones al código.</p>
-    <p>Se evitará que la gráfica funcione como si el cuerpo estuviera cayendo, cuando el cubo reduzca su velocidad en y a 0, la altura de la gráfica se hará constante. Así que se modifica la ecuación del guardado de la posición de la trayectoria.</p>
+   <p>Así se ve la aplicación después de que el cubo se detiene.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen02.jpg?raw=true" width="60%"></p>
+   <p>*la aplicación sigue calculando después de que el cubo se detiene, así que se van a hacer algunas modificaciones al código.</p>
+   <p>Se evitará que la gráfica funcione como si el cuerpo estuviera cayendo, cuando el cubo reduzca su velocidad en y a 0, la altura de la gráfica se hará constante. Así que se modifica la ecuación del guardado de la posición de la trayectoria.</p>
 
 ```javascript
 if(Math.abs(BodyCu.getLinearVelocity().y)>=0.01) {
@@ -185,9 +185,9 @@ if(Math.abs(BodyCu.getLinearVelocity().y)>=0.01) {
 }
 ```
 
-    <p>Después de agregar el código anterior, la trayectoria se ve mas parecida a la del cubo, pero la velocidad en x sigue funcionando aun después de que el cubo se detiene.</p>
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen03.jpg?raw=true" width="60%"></p>
-    <p>Se va a modificar la línea de obtención de velocidad en x.</p>
+   <p>Después de agregar el código anterior, la trayectoria se ve mas parecida a la del cubo, pero la velocidad en x sigue funcionando aun después de que el cubo se detiene.</p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen03.jpg?raw=true" width="60%"></p>
+   <p>Se va a modificar la línea de obtención de velocidad en x.</p>
 
 ```javascript
 if(Math.abs(BodyCu.getLinearVelocity().x)>.01) {
@@ -198,7 +198,7 @@ if(Math.abs(BodyCu.getLinearVelocity().x)>.01) {
 }
 ```
 
-    <p>De la misma forma se va a modificar la línea de obtención del cálculo de la velocidad en y.</p>
+   <p>De la misma forma se va a modificar la línea de obtención del cálculo de la velocidad en y.</p>
 
 ```javascript
 if(Math.abs(BodyCu.getLinearVelocity().y)>.01) {
@@ -209,7 +209,7 @@ if(Math.abs(BodyCu.getLinearVelocity().y)>.01) {
 }
 ```
 
-    <p>Por último se va a modificar la línea de obtención de la posición en x.</p>
+   <p>Por último se va a modificar la línea de obtención de la posición en x.</p>
 
 ```javascript
 if(Math.abs(BodyCu.getLinearVelocity().x)>=0.01) {
@@ -221,4 +221,4 @@ if(Math.abs(BodyCu.getLinearVelocity().x)>=0.01) {
     graficaf.add(5*tfn+pxo);
 }
 ```
-    <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen04.jpg?raw=true" width="60%"></p>
+   <p align="center"><img src="https://github.com/BMJIvan/Servicio_Social/blob/master/Prueba09_experimento_7_tiro_parabolico/imagen04.jpg?raw=true" width="60%"></p>
